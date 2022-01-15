@@ -9,9 +9,14 @@
   height: auto;
 }
 #aboutDiv {
-  width: 10rem;
+  width: 13rem;
 }
-
+#fileInput{
+    position: absolute;
+    left: 55rem;
+    top: 15rem;
+    
+}
 #title {
   text-align: center;
 }
