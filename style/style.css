@@ -1,16 +1,17 @@
-#PageBody{
-    background-color: rgb(250, 128, 114);
+#PageBody {
+  background-color: rgb(250, 128, 114);
 }
 
-#githubButton{
-    position: absolute;
-    left: 100rem;
-    width:60px; /* you can use % */
-    height: auto;
+#githubButton {
+  position: absolute;
+  left: 100rem;
+  width: 60px; /* you can use % */
+  height: auto;
 }
-#aboutDiv{
-    background-color: aqua;
+#aboutDiv {
+  width: 10rem;
 }
-#title{
-    text-align: center;
+
+#title {
+  text-align: center;
 }
