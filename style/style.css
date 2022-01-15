@@ -1,0 +1,16 @@
+#PageBody{
+    background-color: rgb(250, 128, 114);
+}
+
+#githubButton{
+    position: absolute;
+    left: 100rem;
+    width:60px; /* you can use % */
+    height: auto;
+}
+#aboutDiv{
+    background-color: aqua;
+}
+#title{
+    text-align: center;
+}
