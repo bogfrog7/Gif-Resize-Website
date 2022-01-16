@@ -26,3 +26,34 @@
   position: absolute;
   top: 20rem;
 }
+#editBox{
+  width: 200px;
+  height: 200px;
+  border: 3px black;
+  border-style: solid;
+  background-color: white;
+  position: absolute;
+  left: 80rem;
+  top: 10rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+#resize_button{
+  top: 10rem;
+  position: absolute;
+}
+#imageBoxHeight{
+  position: absolute;
+  top: 0.1rem;
+}
+#height_input{
+  position: absolute;
+  top: 3rem;
+  width: 30px;
+}
+#width_input{
+  position: absolute;
+  top: 7rem;
+  width: 30px;
+}
