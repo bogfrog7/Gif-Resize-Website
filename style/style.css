@@ -1,4 +1,8 @@
 #PageBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   background-color: rgb(250, 128, 114);
 }
 
@@ -8,15 +12,17 @@
   width: 60px; /* you can use % */
   height: auto;
 }
-#aboutDiv {
-  width: 13rem;
-}
+
 #fileInput{
-    position: absolute;
-    left: 55rem;
-    top: 15rem;
-    
+  position: absolute;
+  left: 55rem;
+  top: 8rem;
 }
-#title {
-  text-align: center;
+#imageBox{
+  width: 200px;
+  height: 200px;
+  border: 3px black;
+  border-style: solid;
+  position: absolute;
+  top: 20rem;
 }
