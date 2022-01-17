@@ -1,8 +1,23 @@
 const gitButton = document.getElementById("githubButton");
 const input = document.getElementById("fileInput");
 
-let started = false
+const heightInput = document.getElementById("height_input");
+const widthInput = document.getElementById("width_input");
+const resizeButton = document.getElementById("resize_button");
 
+let started = false
+let height = 0
+let width  = 0
+
+resizeButton.onclick = () => {
+  if (height_input.value < 10 || widthInput.value < 10){
+    alert("[MESSAGE] Warning the values specified should be more than 10")
+    console.warn("[LOG] Resize values were incorrect")
+  }else{
+     height = height_input.value;
+     width = widthInput.value;
+  }
+}
 const RenderImage = (image, reader) => {
   image.onload = () => {
     image.height = 200
@@ -14,7 +29,7 @@ const RenderImage = (image, reader) => {
 }
 
 input.onchange = () => {
-  console.log(" |log| Loaded in a file")
+  console.log("[LOG] Loaded in a file")
   const reader = new FileReader();
   reader.onload = () => {
     const image = new Image()
@@ -24,7 +39,7 @@ input.onchange = () => {
         input.remove();
     }else{
       alert("The file type has to be a gif");
-      console.warn("|log|'The file must be a gif'")
+      console.warn("[LOG] 'The file must be a gif'")
     }
   };
   reader.readAsDataURL(input.files[0])
