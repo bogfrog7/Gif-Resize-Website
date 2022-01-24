@@ -13,7 +13,6 @@ const Resize = (image) => {
   if (!image){
     alert("[MESSAGE] No image exists");
   }else{
-    console.log(image);
     image.width = width
     image.height = height
   }
@@ -29,6 +28,8 @@ resizeButton.onclick = () => {
       console.warn("[LOG] Resize values were incorrect");
     }else{
       let image = document.getElementById("imageBox").firstChild;
+      height_input.value = height;
+      width = widthInput.value;
       Resize(image);
     }
   }
