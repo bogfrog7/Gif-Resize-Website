@@ -6,18 +6,34 @@ const widthInput = document.getElementById("width_input");
 const resizeButton = document.getElementById("resize_button");
 
 let started = false
-let height = 0
-let width  = 0
+let height = 30
+let width  = 30
 
-resizeButton.onclick = () => {
-  if (height_input.value < 10 || widthInput.value < 10){
-    alert("[MESSAGE] Warning the values specified should be more than 10")
-    console.warn("[LOG] Resize values were incorrect")
+const Resize = (image) => {
+  if (!image){
+    alert("[MESSAGE] No image exists");
   }else{
-     height = height_input.value;
-     width = widthInput.value;
+    console.log(image);
+    image.width = width
+    image.height = height
   }
 }
+
+resizeButton.onclick = () => {
+  console.log(typeof input.value);
+  if (typeof parseInt(height_input.value) != "number" || typeof parseInt(widthInput.value) != "number"){
+    alert("[Message] The values specified should be an integer");
+  }else{ 
+    if (height_input.value < 10 || widthInput.value < 10){
+      alert("[MESSAGE] Warning the values specified should be more than 10");
+      console.warn("[LOG] Resize values were incorrect");
+    }else{
+      let image = document.getElementById("imageBox").firstChild;
+      Resize(image);
+    }
+  }
+}
+
 const RenderImage = (image, reader) => {
   image.onload = () => {
     image.height = 200
@@ -33,7 +49,6 @@ input.onchange = () => {
   const reader = new FileReader();
   reader.onload = () => {
     const image = new Image()
-
     if (input.files[0]["type"] == "image/gif"){
         RenderImage(image, reader);
         input.remove();
